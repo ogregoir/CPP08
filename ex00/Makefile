@@ -1,4 +1,4 @@
-NAME	=		Easy_find
+NAME	=		easy_find
 
 CFLAGS	=		-Wall -Werror -Wextra	-std=c++98 -fsanitize=address
 

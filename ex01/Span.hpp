@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 17:48:38 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/09/06 19:49:12 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/09/10 13:18:25 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,9 @@ class Span
 		Span &operator=(const Span &copy);
 		~Span();
 		void addNumber(int nbr);
+		std::vector<int> GetStock();
 		int shortestSpan();
 		int longestSpan();
-		void multiadd(std::vector<int>::iterator start, std::vector<int>::iterator end);
+		void multiadd(int begin, int last);
 };
 

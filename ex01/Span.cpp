@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 17:48:24 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/09/06 19:51:40 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/09/10 13:33:06 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,11 @@ int Span::shortestSpan()
     return s;
 }
 
+std::vector<int> Span::GetStock()
+{
+    return stock;
+}
+
 int Span::longestSpan()
 {
     if(stock.size() < 2)
@@ -79,11 +84,22 @@ int Span::longestSpan()
     return (stock[stock.size() - 1] - stock[0]);
 }
 
-void Span::multiadd(std::vector<int>::iterator start, std::vector<int>::iterator end)
+void Span::multiadd(int begin, int last)
 {
-    while (start != end)
+    if (begin < last)
     {
-        this->addNumber(*start);
-        start++;
-    }     
+        std::vector<int> mult;
+        
+        for (int i = begin; i != last + 1; i++)
+            mult.push_back(i);
+
+        std::vector<int>::iterator it = stock.end();
+        std::vector<int>::iterator first = mult.begin();
+        std::vector<int>::iterator last = mult.end();
+        
+        stock.insert(it, first, last);
+    }
+    else
+        throw std::exception();
+    
 }
