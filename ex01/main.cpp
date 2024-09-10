@@ -6,12 +6,12 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 17:34:39 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/09/10 13:35:51 by marvin           ###   ########.fr       */
+/*   Updated: 2024/09/10 13:39:47 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
-/*
+
 int main()
 {
     try
@@ -30,9 +30,8 @@ int main()
         std::cerr << "Error: " << e.what() << '\n';
     }
     return 0;
-}*/
-
-
+}
+/*
 int main()
 {
     try
@@ -57,4 +56,4 @@ int main()
         std::cerr << "Error: " << e.what() << '\n';
     }
     return 0;
-}
+}*/
